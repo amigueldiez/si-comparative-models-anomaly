@@ -89,7 +89,7 @@ from sklearn.svm import OneClassSVM
 from sklearn.model_selection import GridSearchCV
 from sklearn.preprocessing import MaxAbsScaler
 
-# Scale the data using MaxAbsScaler
+# Scale the data using MaxAbsScaler (better for SVM than StandardScaler)
 scaler = MaxAbsScaler()
 X_train_scaled = scaler.fit_transform(X_train)
 X_test_scaled = scaler.transform(X_test)
@@ -99,19 +99,19 @@ print("✅ | Data scaled using MaxAbsScaler")
 # Create the One-Class SVM classifier
 clf = OneClassSVM()
 
-# Parameter grid for One-Class SVM
+# Expanded parameter grid for One-Class SVM
 param_grid = {
-    # 'kernel': ['rbf', 'linear', 'poly', 'sigmoid'],
-    'kernel': ['linear'],
-    'gamma': ['scale', 'auto', 0.001, 0.01, 0.1, 1.0],
-    'nu': [0.01, 0.05, 0.1, 0.2, 0.3, 0.5],
-    'degree': [2, 3, 4],  # Only relevant for 'poly' kernel
-    'coef0': [0.0, 0.1, 0.5, 1.0]  # Only relevant for 'poly' and 'sigmoid'
+    'kernel': ['rbf'],
+    'gamma': ['scale', 'auto', 0.0001, 0.001, 0.005, 0.01, 0.05, 0.1, 0.5, 1.0],
+    'nu': [0.005, 0.01, 0.015, 0.02, 0.03, 0.05, 0.1, 0.15],
+    'degree': [2, 3],
+    'coef0': [0.0, 0.1],
+    'tol': [1e-4, 1e-3, 1e-2],
 }
 
 # Grid search with cross-validation
 print("Starting grid search for One-Class SVM...")
-grid_search = GridSearchCV(estimator=clf, param_grid=param_grid, cv=3, scoring='accuracy', n_jobs=15,verbose=4)
+grid_search = GridSearchCV(estimator=clf, param_grid=param_grid, cv=3, scoring='accuracy', n_jobs=100,verbose=4)
 grid_search.fit(X_train_scaled, y_train)
 best_params = grid_search.best_params_
 print("Best parameters: ", best_params)
