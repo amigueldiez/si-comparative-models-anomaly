@@ -4,28 +4,32 @@ This repository contains the source code and experimental artifacts for the stud
 
 ---
 
-## 📁 Estructura del Repositorio
+## 📁 Repository Structure
 
 ```plaintext
 ├── dataset/
-│   ├── dataset_anonymized.csv.csv
-├── cisis2025_paper.ipynb
+│   └── dataset_anonymized.csv
+├── experimentation.ipynb
+├── ocsvm.py
+├── requirements.txt
 └── README.md
 ```
 
-- `dataset/`:  Contains the anonymized dataset provided by the company.
+- `dataset/`: Contains the anonymized dataset provided by the company.
+- `experimentation.ipynb`: Jupyter Notebook with the full implementation of the experimental pipeline.
+- `ocsvm.py`: Python script with additional implementations for anomaly detection experiments.
+- `requirements.txt`: Python dependencies required for the project.
 
-- `cisis2025_paper.ipynb`: Jupyter Notebook with the full implementation of the experimental pipeline.
+## 📚 Dependencies
 
-## 📚 Libraries Used
+The project requires the following Python libraries (see `requirements.txt` for specific versions):
 
-```plaintext
-pandas
-numpy
-matplotlib
-scikit-learn
-river
-```
+- `pandas` - Data manipulation and analysis
+- `numpy` - Numerical computing
+- `matplotlib` - Data visualization
+- `scikit-learn` - Machine learning algorithms
+- `river` - Online machine learning
+- `ipykernel` - Jupyter kernel support
 
 
 ## 🙏 Acknowledgements
