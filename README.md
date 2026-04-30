@@ -30,4 +30,4 @@ river
 
 ## 🙏 Acknowledgements
 
-This research is a result of the CIBERLAB project (C083/23), carried out under the collaboration agreement between INCIBE and the University of León. This initiative is part of the Recovery, Transformation and Resilience Plan, funded by the European Union (Next Generation EU).
+This research is a result of Grant Explicit PID2024-162298OB-I00 and CENTAURO PLEC2023-010360 funded by MICIU/AEI/10.13039/501100011033 and, as appropriate, by "ERDF A way of making Europe", by "ERDF/EU", by the "European Union" or by the "European Union NextGenerationEU/PRTR".
