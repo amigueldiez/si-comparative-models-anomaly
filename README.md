@@ -1,6 +1,6 @@
-# Unsupervised Online Learning for Network Flow Anomaly Detection: A Comparative Evaluation
+# Beyond Batch Learning: Online Unsupervised Method for Network Flow Anomaly Detection
 
-This repository contains the source code and experimental artifacts for the study presented at the CISIS 2025 conference. The main objective of this work is the comparative evaluation of unsupervised online machine learning models for anomaly detection in network flows. The analysis focuses on their performance over a dataset provided by a private company and their applicability in real-world scenarios.
+The main objective of this work is the comparative evaluation of unsupervised online machine learning models for anomaly detection in network flows. The analysis focuses on their performance over a dataset provided by a private company and their applicability in real-world scenarios.
 
 ---
 
